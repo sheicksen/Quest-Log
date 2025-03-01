@@ -18,7 +18,6 @@ function App() {
   return (
     
     <div className="App">
-      <AiChatComp /> 
       <header className="App-header">
       </header>
       <Navigation></Navigation>
@@ -34,6 +33,7 @@ function App() {
             <Col>
               <div class="task-container">
                   <h2 class="header-font">Gemini</h2>
+                  <AiChatComp /> 
               </div>
             </Col>
           </Row>
