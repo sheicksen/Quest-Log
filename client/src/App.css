@@ -12,3 +12,7 @@
 .header-font{
   font-family:'Courier New', Courier, monospace;
 }
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
