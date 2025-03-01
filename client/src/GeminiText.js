@@ -1,11 +1,11 @@
 import { AiChat } from "./GeminAI";
 import React, { useState } from 'react';
 
-// const startingFact = AiChat("Give me a small uplifting fact or piece of life advice.");
+const startingFact = AiChat("Give me a piece of life advice as if I didn't ask.");
 function AiChatComp() {
     const [inputValue, setInputValue] = useState('');
   // Store the paragraph text in state
-  const [paragraphText, setParagraphText] = useState('');
+  const [paragraphText, setParagraphText] = useState(startingFact);
 
 
   const handleChange = (event) => {
@@ -13,7 +13,6 @@ function AiChatComp() {
   };
 
   const processinput = (value) => {
-
     return AiChat(value);
   }
   const handleSubmit = (event) => {
