@@ -10,7 +10,7 @@ const apiCall = () => {
     console.log(data.data);
   });
 }
-import { Goal } from './goal.js';
+// import { Goal } from './goal.js';
 
 function App() {
   return (
@@ -24,13 +24,16 @@ function App() {
         <Container>
           <Row>
             <Col>
-            Hello
+              <div class="task-container">
+                  <h2 class="header-font">Quest List</h2>
+              </div>
             </Col>
             <Col>
-            There
             </Col>
             <Col>
-            World
+              <div class="task-container">
+                  <h2 class="header-font">Gemini</h2>
+              </div>
             </Col>
           </Row>
         </Container>
