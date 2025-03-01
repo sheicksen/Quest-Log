@@ -5,3 +5,7 @@
     padding-bottom: 1px;
     font-family:'Comic Sans MS', "Comic Sans", serif;
 }
+
+#listed-goal{
+    border: 2px solid black;
+}
