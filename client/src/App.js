@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Goal } from './goal.js';
 
 function App() {
   return (
