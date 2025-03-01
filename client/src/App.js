@@ -2,8 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
+// Gets data sent by the home route.
 const apiCall = () => {
-  axios.get('http://localhost:8080').then((data) => {
+  axios.get('http://localhost:8080/').then((data) => {
     console.log(data);
   });
 }
