@@ -14,7 +14,7 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
     }
 
     return (
-        <div className="Goal-Modal">
+        <div className="Goal-Modal container">
             <form>
 				<div className="form-input">
 					<label>Name:

@@ -32,7 +32,7 @@ export const Goal = () => {
 
     return (
         <div>
-            <button onClick={() => setGoalModalOpen(true)}>Make a New Goal</button>
+            <button onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
             {console.log(goals[1])}
             {goalModalOpen && <NewGoalModal closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
             {
