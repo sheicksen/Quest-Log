@@ -5,6 +5,8 @@ import Navigation from './Navbar';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Goal, goals } from './goal.js';
+import FlowerFinal  from "./images/Flower11.png";
+import { Flower } from './Flower.js';
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
@@ -30,6 +32,7 @@ function App() {
               </div>
             </Col>
             <Col>
+              <Flower></Flower>
             </Col>
             <Col>
               <div class="task-container">
