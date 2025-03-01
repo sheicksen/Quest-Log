@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWorld from './GeminiText';
 import axios from 'axios';
 import Navigation from './Navbar';
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -15,7 +16,9 @@ const apiCall = () => {
 
 function App() {
   return (
+    
     <div className="App">
+      <HelloWorld /> 
       <header className="App-header">
       </header>
       <Navigation></Navigation>
