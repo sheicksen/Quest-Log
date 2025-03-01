@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import Navigation from './Navbar';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Gets data sent by the home route from the server.
@@ -15,9 +15,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Navigation></Navigation>
+
         <Button onClick={apiCall}>Make API Call</Button>
       </header>
+      <body>
+      <Navigation></Navigation>
+        <Container>
+          <Row>
+            <Col>
+            Hello
+            </Col>
+            <Col>
+            There
+            </Col>
+            <Col>
+            World
+            </Col>
+          </Row>
+        </Container>
+      </body>
     </div>
   );
 }
