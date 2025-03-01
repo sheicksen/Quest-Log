@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import Navigation from './Navbar';
 import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
