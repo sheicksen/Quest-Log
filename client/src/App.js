@@ -10,6 +10,7 @@ const apiCall = () => {
     console.log(data.data);
   });
 }
+import { Goal } from './goal.js';
 
 function App() {
   return (
