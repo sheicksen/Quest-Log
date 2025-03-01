@@ -1,5 +1,5 @@
 import './App.css';
-import HelloWorld from './GeminiText';
+import AiChatComp from './GeminiText';
 import axios from 'axios';
 import Navigation from './Navbar';
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -18,7 +18,7 @@ function App() {
   return (
     
     <div className="App">
-      <HelloWorld /> 
+      <AiChatComp /> 
       <header className="App-header">
 
         <Button onClick={apiCall}>Make API Call</Button>

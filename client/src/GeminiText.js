@@ -1,6 +1,6 @@
 import { AiChat } from "./GeminAI";
 import React, { useState } from 'react';
-function HelloWorld() {
+function AiChatComp() {
     const [inputValue, setInputValue] = useState('');
   // Store the paragraph text in state
   const [paragraphText, setParagraphText] = useState('');
@@ -33,4 +33,4 @@ function HelloWorld() {
     );
   }
   
-  export default HelloWorld;
+  export default AiChatComp;
