@@ -6,3 +6,11 @@
   position:fixed;
   top:0;
 }
+.task-container {
+  background-color: coral;
+  align-content: center;
+  padding: 50px;
+}
+.header-font{
+  font-family:'Courier New', Courier, monospace;
+}
