@@ -1,7 +1,7 @@
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI("AIzaSyC6vD3u6H0CPkPWG07vpEdjPTNTHSEvT2k");
-const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash",systemInstruction: "just be yourself"});
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash",systemInstruction: "You are a supportive friend who wants to give good life advice."});
 const chat = model.startChat({
   history: [
     {

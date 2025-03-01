@@ -1,16 +1,23 @@
+body{
+  background-color: rgb(76,52,42);
+}
 .App{
   align-content: center;
+  background-color: rgb(76,52,42);
 }
 .App-nav {
-  background-color: coral;
-  position:fixed;
-  top:0;
+  background-color: rgb(175,146,113);
+  margin-bottom: 5px;
 }
 .task-container {
-  background-color: coral;
+  background-color:rgb(175,146,113);
   align-content: center;
   padding: 50px;
 }
 .header-font{
   font-family:'Courier New', Courier, monospace;
+}
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
