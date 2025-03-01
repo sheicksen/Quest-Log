@@ -1,20 +1,8 @@
-.App {
-  text-align: center;
+.App{
+  align-content: center;
 }
-
-
-.App-header {
-  background-color: hsla(145, 100%, 86%, 0.585);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App-nav {
+  background-color: coral;
+  position:fixed;
+  top:0;
 }
-
-.App-link {
-  color: #000000;
-}
-

@@ -2,7 +2,9 @@ import './App.css';
 import HelloWorld from './GeminiText';
 import axios from 'axios';
 import Navigation from './Navbar';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Goal } from './goal.js';
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
@@ -11,15 +13,31 @@ const apiCall = () => {
   });
 }
 
+
 function App() {
   return (
     
     <div className="App">
       <HelloWorld /> 
       <header className="App-header">
-      <Navigation></Navigation>
+
         <Button onClick={apiCall}>Make API Call</Button>
       </header>
+      <Navigation></Navigation>
+        <Container>
+          <Row>
+            <Col>
+            Hello
+            </Col>
+            <Col>
+            There
+            </Col>
+            <Col>
+            World
+            </Col>
+          </Row>
+        </Container>
+        <Goal></Goal>
     </div>
   );
 }
