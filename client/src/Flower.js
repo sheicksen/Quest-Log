@@ -14,13 +14,20 @@ import Seed from './images/Seed.png';
 import Withered from './images/Withered.png';
 
 import './App.css';
+/* Flower Object 
+* Contains references to all images of the flower
+* stage: array from [0,11], starting with the seed and finalizing in a fully grown flower.
+* end: withered flower image, displayed when a streak is broken
+*/
 const flower = {
     stage:[Seed, Flower1, Flower2, Flower3, Flower4, Flower5, Flower6, Flower7, Flower8, Flower9, Flower10, Flower11],
     end: Withered
 }
-export function Flower(){
-    let [flowerStage, setFlowerStage] = useState(4);
+
+export function Flower({streakVal}){
+    let [flowerStage, setFlowerStage] = useState(streakVal);
+    // If streak val >=0, a flower image will be displayed. If streakVal = -1, a withered flower will be displayed.
     return (
-        <img class="pixel-art" height="500px" width="500px" src={false ? flower.end : flower.stage[flowerStage]} alt=""></img>
+        <img class="pixel-art" height="500px" width="500px" src={streakVal === -1 ? flower.end : flower.stage[flowerStage]} alt=""></img>
     );
 }
