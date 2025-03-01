@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWorld from './GeminiText';
 import axios from 'axios';
 import Navigation from './Navbar';
 import { Button } from 'react-bootstrap';
@@ -12,7 +13,9 @@ const apiCall = () => {
 
 function App() {
   return (
+    
     <div className="App">
+      <HelloWorld /> 
       <header className="App-header">
       <Navigation></Navigation>
         <Button onClick={apiCall}>Make API Call</Button>
