@@ -26,6 +26,7 @@ function App() {
             <Col>
               <div class="task-container">
                   <h2 class="header-font">Quest List</h2>
+                  <Goal></Goal>
               </div>
             </Col>
             <Col>
@@ -38,7 +39,6 @@ function App() {
             </Col>
           </Row>
         </Container>
-        <Goal></Goal>
     </div>
   );
 }

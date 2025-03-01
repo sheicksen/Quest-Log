@@ -30,7 +30,7 @@ export const Goal = () => {
     return (
         <div>
             {goals.map(function(goal){
-                    return <button key={goal.name}>{goal.name}</button>
+                    return <li key={goal.name}>{goal.name}</li>
                   })}
             <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
             {console.log(goals)}
