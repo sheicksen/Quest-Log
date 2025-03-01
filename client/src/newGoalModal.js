@@ -5,7 +5,7 @@ import './newGoalModal.css'
 export const NewGoalModal = ({closeNewGoalModal}) => {
 
     const [submittedGoal,setSubmittedGoal] = useState({
-		name:"", description:"",complete:false});
+		name:"", description:"", repeatable: false, streak:0, complete:false});
 
 	const [goalFilled, setGoalFilled] = useState(true);
 
@@ -18,7 +18,7 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
 	}
 
 	const submitGoal = () => {
-        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.complete));
+        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false));
         closeNewGoalModal();
     }
 
@@ -36,6 +36,15 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
 					<label>Description:
 						<br></br>
 						<input className="input" name="description" defaultValue={submittedGoal.description} onChange={(e)=>onChangeHandler(e)}/>
+					</label>
+				</div>
+                <div className="form-input">
+					<label>Repeatable:
+						<br></br>
+						<input type="radio" className="input" name="repeatable" id="True" value="Yes" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
+                        <label for="Yes">Yes</label>
+                        <input type="radio" className="input" name="repeatable" id="False" value="False" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
+                        <label for="True">No</label>
 					</label>
 				</div>
             </form>

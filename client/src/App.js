@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navigation from './Navbar';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Goal } from './goal.js';
+import { Goal, goals } from './goal.js';
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
@@ -26,6 +26,7 @@ function App() {
             <Col>
               <div class="task-container">
                   <h2 class="header-font">Quest List</h2>
+                  <Goal></Goal>
               </div>
             </Col>
             <Col>
@@ -38,7 +39,6 @@ function App() {
             </Col>
           </Row>
         </Container>
-        <Goal></Goal>
     </div>
   );
 }
