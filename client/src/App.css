@@ -22,3 +22,7 @@ body{
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+.central-point{
+  position: absolute; 
+  left:37%
+}
