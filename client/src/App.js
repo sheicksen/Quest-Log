@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import Navigation from './Navbar';
+import { Button } from 'react-bootstrap';
 
-// Gets data sent by the home route.
+// Gets data sent by the home route from the server.
 const apiCall = () => {
   axios.get('http://localhost:8080/').then((data) => {
-    console.log(data);
+    console.log(data.data);
   });
 }
 
@@ -13,7 +14,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <button onClick={apiCall}>Make API Call</button>
+      <Navigation></Navigation>
+        <Button onClick={apiCall}>Make API Call</Button>
       </header>
     </div>
   );
