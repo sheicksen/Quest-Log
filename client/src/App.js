@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navigation from './Navbar';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Goal } from './goal.js';
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
@@ -10,7 +11,7 @@ const apiCall = () => {
     console.log(data.data);
   });
 }
-import { Goal } from './goal.js';
+
 
 function App() {
   return (
@@ -19,7 +20,6 @@ function App() {
 
         <Button onClick={apiCall}>Make API Call</Button>
       </header>
-      <body>
       <Navigation></Navigation>
         <Container>
           <Row>
@@ -34,7 +34,7 @@ function App() {
             </Col>
           </Row>
         </Container>
-      </body>
+        <Goal></Goal>
     </div>
   );
 }
