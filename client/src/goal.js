@@ -12,7 +12,7 @@ export class GoalClass{
     };
 };
 
-export const goals = [new GoalClass("","",false)];
+export const goals = [];
 
 export const Goal = () => {
 
@@ -32,8 +32,8 @@ export const Goal = () => {
 
     return (
         <div>
-            <button onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
-            {console.log(goals[1])}
+            <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
+            {console.log(goals)}
             {goalModalOpen && <NewGoalModal closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
             {
                 //<button onClick={markComplete}>Mark as complete</button>
