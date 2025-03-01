@@ -8,6 +8,7 @@ body{
 .App-nav {
   background-color: rgb(175,146,113);
   margin-bottom: 5px;
+  padding-left: 20px;
 }
 .task-container {
   background-color:rgb(175,146,113);
