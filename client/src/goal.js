@@ -20,11 +20,15 @@ export class GoalClass{
 };
 
 export let goals = [];
+export let completeNonrepeat = []
 
 export function removeGoal(goal){
     if(goal.repeatable==="False"){
+        let nonRepeat = goals.filter((current)=> current===goal)
+        completeNonrepeat.push(nonRepeat);
         const filteredGoals = goals.filter((current)=> current!=goal)
         goals = [...filteredGoals];
+        console.log(completeNonrepeat);
     }
 }
 

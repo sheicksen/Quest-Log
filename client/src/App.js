@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Goal, goals } from './goal.js';
 import { Flower } from './Flower.js';
 import Footer from './Footer.js';
+import { CompletedGarden } from './completedGarden';
 
 // Gets data sent by the home route from the server.
 const apiCall = () => {
@@ -52,6 +53,7 @@ function App() {
             </Col>
           </Row>
         </Container>
+        <CompletedGarden></CompletedGarden>
         <Footer></Footer>
     </div>
   );

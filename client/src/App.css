@@ -65,3 +65,21 @@
   font-size:30px;
   font-family: 'Courier New', Courier, monospace;
 }
+
+.footer {
+  background-color: #636B2F;
+  color: #091502;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.completedGarden {
+  background-color:red;
+  color: #091502;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  justify-content: center;
+}

@@ -1,5 +1,6 @@
 import './App.css';
 import {Container, Row, Col} from "react-bootstrap";
+import { CompletedGarden } from './completedGarden';
 
 function Footer(){
     return(
