@@ -24,13 +24,18 @@ const flower = {
     end: Withered
 }
 
-export function Flower({flowerStage}){
+export function Flower({goal}){
     // If streak val >=0, a flower image will be displayed. If streakVal = -1, a withered flower will be displayed.
-    console.log("Rerendering ", flowerStage);
     return (
         <div>
-            <img class="pixel-art" height="500px" width="500px" src={flowerStage > 11 ? flower.end : flower.stage[flowerStage]} alt="Your streak flower!"></img>
-            <p>Current Streak: {flowerStage}</p>
+            <img class="pixel-art" height="450px" width="450px" src={goal.streak < 0 ? flower.end : goal.streak > 11 ? flower.stage[11]:flower.stage[goal.streak]} alt="Your streak flower!"></img>
+            <div style={{alignItems:"center"}}>
+                <label>{goal.name}</label>
+                <ul>
+                    <li>Current Streak: {goal.streak}</li>
+                    <li>{goal.description}</li>
+                </ul>
+            </div>
         </div>
     );
 }

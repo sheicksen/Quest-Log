@@ -17,10 +17,14 @@ const apiCall = () => {
 }
 function App() {
   const [streakDisplay, setStreakDisplay] = useState(0);
+  const [currentGoal, setCurrentGoal] = useState({name: "No task selected", description: "Select a task to view your plant's progression.", streak:0});
   const passStreak = (streak) => {
     setStreakDisplay(streak);
-    console.log(streakDisplay);
   };
+  const passGoal = (goal) =>{
+    setStreakDisplay(goal.streak);
+    setCurrentGoal(goal);
+  }
   return (
     
     <div className="App">
@@ -30,12 +34,13 @@ function App() {
             <Col>
               <div class="task-container col-min-height">
                   <h2 class="header-font">Quest Log</h2>
-                  <Goal onFocus={passStreak}></Goal>
+                  <Goal onFocus={passGoal} onStreakUpdate={passStreak}></Goal>
               </div>
             </Col>
             <Col style={{height:"100vh"}}>
             <div class="col-min-height bg-container bg-gradient">
-              <Flower flowerStage={streakDisplay}></Flower>
+              <h2 class="header-font">Quest Development</h2>
+              <Flower streak={streakDisplay} goal={currentGoal}></Flower>
             </div>
               
             </Col>
@@ -47,8 +52,6 @@ function App() {
             </Col>
           </Row>
         </Container>
-        <Button onClick={passStreak}>Update Streak
-        </Button>
         <Footer></Footer>
     </div>
   );
