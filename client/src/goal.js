@@ -20,7 +20,7 @@ export class GoalClass{
 };
 
 export let goals = [];
-export let completeNonrepeat = []
+export let completeNonrepeat = [];
 
 export function removeGoal(goal){
     if(goal.repeatable==="False"){
