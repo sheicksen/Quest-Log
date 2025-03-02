@@ -25,12 +25,18 @@ is greater than 1.
 function checkStreaks(){
   const today=new Date();
   for(let i = 0; i < goals.length; i++){
-    let submitDate = Date.parse(goals[i].lastSubmit);
+    let stringDate = goals[i].lastSubmit.substring(0, 10);
+    let day = stringDate.substring(8,10);
+    let month = stringDate.substring(5,7);
+    let year = stringDate.substring(0,4);
+    console.log("Last submit was ", day+"/"+month+"/"+year);
+    let submitDate= new Date(month+"/"+day+"/"+year);
     let timeDiff = today.getTime() - submitDate.getTime();
     let daysDiff = Math.round(timeDiff / (1000*3600*24));
 
     if (daysDiff > 1){
       goals[i].streak = -1;
+      console.log("Streak Broken");
     }
   }
 }

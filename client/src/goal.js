@@ -27,16 +27,21 @@ export class GoalClass{
         this.complete = false
         this.visible = false
         this.date = new Date().toDateString();
-        this.lastSubmit = new Date().toDateString();
+        this.lastSubmit = new Date().toISOString();
     };
 };
 
 export let goals = [];
 export let completeNonrepeat = [];
-
+let demoGoal = new GoalClass("Old task", "This task hasn't been worked on in a while", true);
+demoGoal.streak = 5;
+demoGoal.date = new Date("01/02/2025").toDateString();
+demoGoal.lastSubmit = new Date("01/02/2025").toISOString();
+goals.push(demoGoal);
 export function removeGoal(goal){
-    /** This function removes a non-repeatable
-     * 
+    /** This function removes a non-repeatable task from the goals array when the task is completted and puts it in an array called completeNonrepeat
+     * params:
+     * goal - the completed goal that is a non-repeatable task
      */
     if(goal.repeatable==="False"){
         let nonRepeat = goals.filter((current)=> current===goal)

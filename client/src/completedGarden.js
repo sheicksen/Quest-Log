@@ -6,7 +6,8 @@ import './App.css';
 export function CompletedGarden() {
     /** This function places a flower at the bottom of the screen for every non-repeatable task completed
      * In goal.js the non-repeated tasks are pushed to an array titled completeNonrepeat upon completion
-     * This file maps through this array and displays a flower
+     * return:
+     * display of a flower for every element in completeNonrepeat
     */
     console.log("Comp garden",completeNonrepeat.length >= 1? completeNonrepeat : "Not yet initialized");
     return (
