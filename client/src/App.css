@@ -77,12 +77,13 @@
 }
 
 .completedGarden {
-  background-color:red;
+  background-color:#636B2F;
   color: #091502;
   text-align: center;
   font-family:'Courier New', Courier, monospace;
   font-size: 20px;
   justify-content: center;
+  display:flex;
 }
 .details-box{
   background-color: rgb(175,146,113);
