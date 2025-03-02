@@ -21,7 +21,7 @@ export class GoalClass{
 
 export const goals = [];
 
-export const Goal = () => {
+export const Goal = ({onFocus}) => {
 
    let [goalModalOpen, setGoalModalOpen] = useState(false);
 
@@ -29,12 +29,19 @@ export const Goal = () => {
 
    let [visible, setVisible] = useState(false);
 
-   function flipVisibility(goal) {
+   function flipVisibility() {
         //const updatedGoals = goals.map((current) => current===goal ? {...goals, visible: !current.visible} : current);
         //goal.visible===true ? goal.visible = false : goal.visible = true;
         //setInfoModal(!InfoModalOpen);
         //setGoals(updatedGoals);
         setVisible(!visible);
+
+
+   }
+   function handleFocus(e, streak){
+        flipVisibility();
+        console.log("streak", streak);
+        onFocus(streak);
    }
 
     /*function flipVisibility(goal){
@@ -67,7 +74,7 @@ return (
         <div className="goal-list-modal">
         {goals.map(((goal) => 
                  <div className="listed-goal">
-                    <button onClick={flipVisibility}>
+                    <button onClick={(e) => {handleFocus(e, goal.streak)}}>
                     <li key={goal.name}>{goal.name}</li>
                     </button>
                     {visible && <InfoGoal goal={goal} closeInfoModal={()=>setInfoModal(false)}/>}
