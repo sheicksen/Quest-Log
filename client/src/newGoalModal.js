@@ -50,10 +50,12 @@ export const NewGoalModal = ({goals, flipButtonVisibility, closeNewGoalModal}) =
                 <div className="form-input">
 					<label>Repeatable:
 						<br></br>
-						<input type="radio" className="input" name="repeatable" id="True" value="Yes" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
-                        <label for="Yes">Yes</label>
-                        <input type="radio" className="input" name="repeatable" id="False" value="False" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
-                        <label for="True">No</label>
+                        <label for="True">
+                            <input type="radio" className="input" name="repeatable" id="True" value="Yes" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>  
+                            Yes, This Quest Will Repeat</label>
+                        <label for="False">
+                            <input type="radio" className="input" name="repeatable" id="False" value="False" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
+                            No, This Quest Will Only Be Done Once</label>
 					</label>
 				</div>
             </form>
