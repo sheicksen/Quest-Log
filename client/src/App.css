@@ -11,6 +11,7 @@
   background-color: rgb(7,69,81);
   background: linear-gradient(0deg, rgba(7,69,81,1) 0%, rgba(19,123,163,1) 35%, rgba(212,240,242,1) 100%);
   padding:50px;
+  align-content: center;
 }
 .col-min-height{
   min-height:99%;
@@ -64,4 +65,12 @@
   font-family: "Comic Sans MS", sans-serif;
   font-size:30px;
   font-family: 'Courier New', Courier, monospace;
+}
+.details-box{
+  background-color: rgb(175,146,113);
+  font-size:17px;
+  padding:20px;
+}
+.flower{
+  margin: 20px;
 }
