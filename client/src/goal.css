@@ -1,3 +1,7 @@
+.add-goal{
+    padding: 20px;
+}
+
 .newGoal-button {
     border:0px;
     background-color: #a59b9a;
@@ -9,3 +13,4 @@
 .listed-goal{
     border: 2px solid black;
 }
+

@@ -19,7 +19,14 @@ export class GoalClass{
     };
 };
 
-export const goals = [];
+export let goals = [];
+
+export function removeGoal(goal){
+    if(goal.repeatable==="False"){
+        const filteredGoals = goals.filter((current)=> current!=goal)
+        goals = [...filteredGoals];
+    }
+}
 
 export const Goal = ({onFocus, onStreakUpdate}) => {
     
@@ -61,9 +68,12 @@ return (
                 </div>
         ))}
         </div>
-        {buttonOpen && <button className="newGoal-button" onClick={() => addingQuest()}>Add New Quest</button>}
-        {console.log(goals)}
-        {goalModalOpen && <NewGoalModal goals={goals} flipButtonVisibility={()=>(flipButtonVisibility())} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
+        <div className='add-goal'>
+            {buttonOpen && <button className="newGoal-button" onClick={() => addingQuest()}>Add New Quest</button>}
+            {console.log(goals)}
+            {goalModalOpen && <NewGoalModal goals={goals} flipButtonVisibility={()=>(flipButtonVisibility())} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
+        </div>
     </div>
+        
     )
 };
