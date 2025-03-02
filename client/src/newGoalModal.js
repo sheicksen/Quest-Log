@@ -56,7 +56,7 @@ export const NewGoalModal = ({goals, closeNewGoalModal}) => {
 					</label>
 				</div>
             </form>
-            <button className="submit-button" onClick={submitGoal}>Make Goal</button>
+            <button className="submit-button" onClick={submitGoal}>Make Quest</button>
             </div>
         </div>
     );

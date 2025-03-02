@@ -11,7 +11,7 @@ function Footer(){
                 </Col>
             
                 <Col>
-                    Contributers: Sophia Heicksen, Nolan Keefe, Samantha Paez, Jackson Singely
+                    Contributers: Sophia Heicksen, Nolan Keefe, Samantha Paez, Jackson Singley
                 </Col>
                 <Col>
                     Hack the Past
