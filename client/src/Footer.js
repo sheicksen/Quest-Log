@@ -6,13 +6,13 @@ function Footer(){
     return(
         <div style={{width:"100%", textalign:"center"}} class="footer">
             <Container>
-                <Row>
+                <Row style={{padding:"10px"}}>
                 <Col>
                     HenHacks 2025
                 </Col>
             
                 <Col>
-                    Contributers: Sophia Heicksen, Nolan Keefe, Samantha Paez, Jackson Singley
+                    <p style={{fontSize:"15px", width:"45vw"}}>Contributers: Sophia Heicksen, Nolan Keefe, Samantha Paez, Jackson Singley</p>
                 </Col>
                 <Col>
                     Hack the Past

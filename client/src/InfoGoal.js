@@ -15,7 +15,7 @@ export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
 
     return (
         <div className="Goal-Modal-Container">
-            <div className="goal-modal">
+            <div className="new-goal-modal">
                 <div>Name: {goal.name}</div>
                 <div>Description: {goal.description}</div>
                 <div>Streaks: {streaks}</div>
