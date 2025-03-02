@@ -1,21 +1,40 @@
-body{
-  background-color: rgb(76,52,42);
-}
+
 .App{
   align-content: center;
   background-color: rgb(76,52,42);
+}
+.gradient-bg{
+  background-color: rgb(7,69,81);
+  background: linear-gradient(0deg, rgba(7,69,81,1) 0%, rgba(19,123,163,1) 35%, rgba(212,240,242,1) 100%);
+  padding:50px;
+}
+.col-min-height{
+  min-height:99%;
 }
 .App-nav {
   background-color: rgb(175,146,113);
   margin-bottom: 5px;
   padding-left: 20px;
 }
+.bg-container{
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+/* .bg-image{
+  object-fit:cover;
+  position:relative;
+  height:100%;
+  width:100%;
+} */
 .task-container {
   background-color:rgb(175,146,113);
   align-content: center;
   padding: 50px;
 }
 .header-font{
+  position: relative;
+  top: 10px;
   font-family:'Courier New', Courier, monospace;
 }
 .pixel-art {
@@ -25,4 +44,12 @@ body{
 .central-point{
   position: absolute; 
   left:37%
+}
+.footer {
+  background-color: #636B2F;
+  color: #091502;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  justify-content: center;
 }
