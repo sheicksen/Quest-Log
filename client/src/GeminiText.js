@@ -1,7 +1,7 @@
 import { AiChat } from "./GeminAI";
 import React, { useState } from 'react';
 
-const startingFact = AiChat("Give me a piece of life advice as if I didn't ask.");
+const startingFact = AiChat("Give me a piece of life advice as if I didn't ask. Don't use *");
 function AiChatComp() {
     const [inputValue, setInputValue] = useState('');
   // Store the paragraph text in state
