@@ -34,7 +34,6 @@ export const Goal = () => {
     function markComplete(goal){
        goal.complete = true;
     }
-
     /*function flipVisibility(goal){
         (goal.visible===true) ? goal.visible = false : goal.visible = t
     }*/
