@@ -27,7 +27,7 @@ export class GoalClass{
         this.complete = false
         this.visible = false
         this.date = new Date().toDateString();
-        this.lastSubmit = new Date().toDateString();
+        this.lastSubmit = new Date().toISOString();
     };
 };
 
