@@ -93,17 +93,33 @@
 
 .listed-goal{
   background-color: rgb(175,146,113);
+  padding-top:10px;
   border:none;
+}
+
+.listed-goal:hover{
+  text-decoration: underline;
+  background-color: rgb(190, 161, 128);
 }
 
 .newGoal-button{
   background-color: rgb(110, 89, 80);
-  size: 100px;
+  font-size: 30px;
+}
+
+.newGoal-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
 }
 
 .complete-button{
-  background-color: rgb(175,146,113);
-  border: none;
+  background-color: rgb(110, 89, 80);
+  font-size: 20px;
+}
+
+.complete-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
 }
 
 .add-goal{
@@ -119,4 +135,19 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.goal-modal{
+  background-color: rgb(151, 115, 100);
+  padding:10px
+}
+
+.submit-button{
+  background-color: rgb(110, 89, 80);
+  font-size: 20px;
+}
+
+.submit-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
 }
