@@ -4,7 +4,7 @@ import { goals } from "./goal.js"
 import './newGoalModal.css'
 import { updateHist } from "./GeminAI.js";
 
-export const NewGoalModal = ({goals, closeNewGoalModal}) => {
+export const NewGoalModal = ({goals, flipButtonVisibility, closeNewGoalModal}) => {
 
     const [submittedGoal,setSubmittedGoal] = useState({
 		name:"", description:"", repeatable: false, streak:0, complete:false, visible:false});
@@ -26,6 +26,7 @@ export const NewGoalModal = ({goals, closeNewGoalModal}) => {
 			histupdate += "\nGoal name: "+goal.name + "\nGoal description: " + goal.description + "\nRepeatable?: "+ goal.repeatable;
 		}
 		updateHist(histupdate);
+        flipButtonVisibility();
 		closeNewGoalModal();
 		
     }

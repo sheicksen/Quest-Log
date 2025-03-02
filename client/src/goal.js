@@ -22,6 +22,8 @@ export class GoalClass{
 export const goals = [];
 
 export const Goal = ({onFocus}) => {
+    
+    let [buttonOpen, setButtonOpen] = useState(true);
 
    let [goalModalOpen, setGoalModalOpen] = useState(false);
 
@@ -30,44 +32,18 @@ export const Goal = ({onFocus}) => {
    let [visible, setVisible] = useState(false);
 
    function flipVisibility() {
-        //const updatedGoals = goals.map((current) => current===goal ? {...goals, visible: !current.visible} : current);
-        //goal.visible===true ? goal.visible = false : goal.visible = true;
-        //setInfoModal(!InfoModalOpen);
-        //setGoals(updatedGoals);
         setVisible(!visible);
-
-
-   }
-   function handleFocus(e, streak){
-        flipVisibility();
-        console.log("streak", streak);
-        onFocus(streak);
    }
 
-    /*function flipVisibility(goal){
-        (goal.visible===true) ? goal.visible = false : goal.visible = true
-    }*/
+   function flipButtonVisibility(){
+    setButtonOpen(!buttonOpen);
+   }
 
-    /*return (
-        <div>
-            <div className="goal-list-modal">
-                {goals.map((goal,index) => 
-                     <div className="listed-goal">
-                        <button onClick={()=>{flipVisibility(goal)}}>
-                            {console.log(goal)}
-                            {console.log(index)}
-                        <li key={index}>{goal.name}</li>
-                        </button>
-                        {goal.visible && <InfoGoal goal={goal} closeInfoModal={(goal)=>{flipVisibility(goal)}}/>}
-                    </div>
-                  )}
-            </div>
-            <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
-            {console.log(goals)}
-            {goalModalOpen && <NewGoalModal closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
-        </div>
-    )
-};*/
+   function addingQuest(){
+    setGoalModalOpen(true);
+    flipButtonVisibility();
+   }
+
 
 return (
     <div>
@@ -81,9 +57,9 @@ return (
                 </div>
         ))}
         </div>
-        <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Add New Quest</button>
+        {buttonOpen && <button className="newGoal-button" onClick={() => addingQuest()}>Add New Quest</button>}
         {console.log(goals)}
-        {goalModalOpen && <NewGoalModal goals={goals} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
+        {goalModalOpen && <NewGoalModal goals={goals} flipButtonVisibility={()=>(flipButtonVisibility())} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
     </div>
     )
 };
