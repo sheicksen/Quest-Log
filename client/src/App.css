@@ -2,24 +2,31 @@
 .App{
   align-content: center;
   background-color: rgb(76,52,42);
+  font-family: "Comic Sans MS", sans-serif;
+}
+@font-face {
+  font-family: "Comic Sans MS";
+  src: local("Comic Sans MS"), url("./fonts/Comic Sans MS.ttf") format("ttf"); /* Adjust path and format */
 }
 .gradient-bg{
   background-color: rgb(7,69,81);
   background: linear-gradient(0deg, rgba(7,69,81,1) 0%, rgba(19,123,163,1) 35%, rgba(212,240,242,1) 100%);
   padding:50px;
+  align-content: center;
 }
 .col-min-height{
   min-height:99%;
 }
 .App-nav {
+  font-family: "Comic Sans MS", sans-serif;
   background-color: rgb(175,146,113);
   margin-bottom: 5px;
   padding-left: 20px;
 }
 .bg-container{
-  background-size: cover;
-  background-position: center;
+  font-family: "Comic Sans MS", sans-serif;
   height: 100%;
+  text-align:center;
 }
 /* .bg-image{
   object-fit:cover;
@@ -28,14 +35,22 @@
   width:100%;
 } */
 .task-container {
+  font-family: "Comic Sans MS", sans-serif;
   background-color:rgb(175,146,113);
   align-content: center;
   padding: 50px;
 }
+
 .header-font{
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
   position: relative;
   top: 10px;
-  font-family:'Courier New', Courier, monospace;
+}
+.body-font{
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
+  position: relative;
 }
 .pixel-art {
   image-rendering: pixelated;
@@ -54,6 +69,121 @@
   justify-content: center;
 }
 .navbar-header{
+  font-family: "Comic Sans MS", sans-serif;
   font-size:30px;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.completedGarden {
+  background-color:#636B2F;
+  color: #091502;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 20px;
+  justify-content: center;
+  display:flex;
+}
+.details-box{
+  background-color: rgb(175,146,113);
+  font-size:17px;
+  padding:20px;
+  text-align: left;
+}
+.flower{
+  margin: 10px 10px 10vh 10px;
+}
+
+.goal-list-modal{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.listed-goal{
+  background-color: rgb(175,146,113);
+  padding-top:10px;
+  border:none;
+}
+
+.listed-goal:hover{
+  text-decoration: underline;
+  background-color: rgb(190, 161, 128);
+}
+
+.newGoal-button{
+  background-color: rgb(110, 89, 80);
+  font-size: 30px;
+}
+
+.newGoal-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
+.complete-button{
+  background-color: rgb(110, 89, 80);
+  box-sizing: border-box;
+  height: 60px;
+  font-size: 100%;
+}
+
+.complete-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
+.change-date{
+  background-color: rgb(110, 89, 80);
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 10px;
+}
+
+.change-date:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
+.add-goal{
+  padding-top: 20px;
+}
+.bg-green-gradient {
+  background: rgb(99,107,47);
+  background: linear-gradient(0deg, rgba(99,107,47,1) 0%,rgba(99,107,47,1) 59%,rgb(76,52,42) 100%);
+  color: rgb(175,146,113);
+
+}
+.center-content{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.goal-modal{
+  background-color: rgb(151, 115, 100);
+  padding:10px
+}
+
+.submit-button{
+  background-color: rgb(110, 89, 80);
+  font-size: 20px;
+}
+
+.submit-button:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
+.submit-gemini{
+  background-color: rgb(110, 89, 80);
+  font-size: 20px;
+}
+
+.submit-gemini:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
+.customSlider{
+  width:10px auto;
+  margin: auto;
 }

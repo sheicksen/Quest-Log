@@ -1,28 +1,26 @@
-import { useState } from "react";
+import { use, useState } from "react";
+import {removeGoal} from "./goal"
 
-export const InfoGoal = ({goal, closeInfoModal}) => {
+export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
 
-    const [submittedGoal,setSubmittedGoal] = useState({
-		name:goal.name, description:goal.description, repeatable: goal.repeatable, streak:goal.streak, complete:goal.complete, visible:goal.visible});
+    const [streaks,setStreaks] = useState(goal.streak);
 
-	const [goalFilled, setGoalFilled] = useState(true);
-
-    const onChangeHandler = (e) => {
-		setSubmittedGoal({
-			...submittedGoal,
-			[e.target.name]:e. target.value,
-		});
-		setGoalFilled(true)
-	}
+    function markComplete(goal){
+        goal.streak += 1;
+        setStreaks(goal.streak);
+        updateStreak(goal.streak);
+        goal.complete = true;
+        goal.lastSubmit = new Date().toISOString();
+        removeGoal(goal)
+     }
 
     return (
         <div className="Goal-Modal-Container">
-            <div className="goal-modal">
-                <div>Name: {goal.name}</div>
-                <div>Description: {goal.description}</div>
-                <div>Streak: {goal.streak}</div>
-                <div>Complete: {goal.complete}</div>
-            <button className="close-button" onClick={closeInfoModal()}>Close Information</button>
+            <div className="new-goal-modal">
+                <div className="body-font">Name: {goal.name}</div>
+                <div className="body-font">Description: {goal.description}</div>
+                <div className="body-font">Streaks: {streaks}</div>
+                <button className="complete-button" onClick={()=> markComplete(goal)}>Mark {goal.name} Complete</button>
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Flower1 from './images/Flower1.png';
 import Flower2 from './images/Flower2.png';
 import Flower3 from './images/Flower3.png';
@@ -24,10 +24,24 @@ const flower = {
     end: Withered
 }
 
-export function Flower({streakVal}){
-    let [flowerStage, setFlowerStage] = useState(streakVal);
+export function Flower({goal}){
     // If streak val >=0, a flower image will be displayed. If streakVal = -1, a withered flower will be displayed.
     return (
-        <img class="pixel-art" height="500px" width="500px" src={streakVal === -1 ? flower.end : flower.stage[flowerStage]} alt=""></img>
+        <div>
+            <img class="pixel-art flower" height="450px" width="450px" src={goal.streak < 0 ? flower.end : goal.streak > 11 ? flower.stage[11]:flower.stage[goal.streak]} alt="Your streak flower!"></img>
+            <div class="details-box"style={{alignItems:"center"}}>
+                <label>{goal.name}</label>
+                <ul>
+                    <li>{goal.description}</li>
+                    {goal.name === "No task selected" ?
+                        <li>or make one to get started</li>:
+                        <div>
+                            <li>Current Streak: {goal.streak}</li>
+                            <li>Quest taken on {goal.date}</li>
+                        </div> 
+                    }
+                </ul>
+            </div>
+        </div>
     );
 }

@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Goal, goals, GoalClass} from "./goal.js"
+import { Goal, GoalClass} from "./goal.js"
+import { goals } from "./goal.js"
 import './newGoalModal.css'
 import { updateHist } from "./GeminAI.js";
 
-export const NewGoalModal = ({closeNewGoalModal}) => {
+export const NewGoalModal = ({goals, flipButtonVisibility, closeNewGoalModal}) => {
 
     const [submittedGoal,setSubmittedGoal] = useState({
 		name:"", description:"", repeatable: false, streak:0, complete:false, visible:false});
@@ -19,12 +20,14 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
 	}
 
 	const submitGoal = () => {
-        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false, false));
+		const today = new Date().toDateString;
+        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false, false, today, new Date().toISOString()));
 		let histupdate = "Updated list of goals:";
         for (const goal of goals){
 			histupdate += "\nGoal name: "+goal.name + "\nGoal description: " + goal.description + "\nRepeatable?: "+ goal.repeatable;
 		}
 		updateHist(histupdate);
+        flipButtonVisibility();
 		closeNewGoalModal();
 		
     }
@@ -48,14 +51,16 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
                 <div className="form-input">
 					<label>Repeatable:
 						<br></br>
-						<input type="radio" className="input" name="repeatable" id="True" value="Yes" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
-                        <label for="Yes">Yes</label>
-                        <input type="radio" className="input" name="repeatable" id="False" value="False" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
-                        <label for="True">No</label>
+                        <label for="True">
+                            <input type="radio" className="input" name="repeatable" id="True" value="Yes" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>  
+                            Yes, This Quest Will Repeat</label>
+                        <label for="False">
+                            <input type="radio" className="input" name="repeatable" id="False" value="False" defaultValue={submittedGoal.repeatable} onChange={(e)=>onChangeHandler(e)}/>
+                            No, This Quest Will Only Be Done Once</label>
 					</label>
 				</div>
             </form>
-            <button className="submit-button" onClick={submitGoal}>Make Goal</button>
+            <button className="submit-button" onClick={submitGoal}>Make Quest</button>
             </div>
         </div>
     );
