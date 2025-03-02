@@ -30,14 +30,14 @@ export function Flower({goal}){
         <div>
             <img class="pixel-art flower" height="450px" width="450px" src={goal.streak < 0 ? flower.end : goal.streak > 11 ? flower.stage[11]:flower.stage[goal.streak]} alt="Your streak flower!"></img>
             <div class="details-box"style={{alignItems:"center"}}>
-                <label>{goal.name}</label>
+                <label class="body-font">{goal.name}</label>
                 <ul>
-                    <li>{goal.description}</li>
+                    <li class="body-font">{goal.description}</li>
                     {goal.name === "No task selected" ?
-                        <li>or make one to get started</li>:
+                        <li class="body-font">or make one to get started</li>:
                         <div>
-                            <li>Current Streak: {goal.streak}</li>
-                            <li>Quest taken on {goal.date}</li>
+                            <li class="body-font">Current Streak: {goal.streak}</li>
+                            <li class="body-font">Quest taken on {goal.date}</li>
                         </div> 
                     }
                 </ul>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { NewGoalModal } from './newGoalModal';
 import { InfoGoal } from './InfoGoal.js'
+
 export class GoalClass{
     /** This class represents a goal
      * attributes: 
@@ -86,14 +87,14 @@ return (
         {goals.map(((goal) => 
                  <div>
                     <button className="listed-goal" onClick={(e) => {handleFocus(e, goal)}}>
-                    <li className="listed-goal" key={goal.name}>{goal.name}</li>
+                    <li class="body-font" lassName="listed-goal" key={goal.name}>{goal.name}</li>
                     </button>
                     {visible && <InfoGoal updateStreak={onStreakUpdate} goal={goal} closeInfoModal={()=>setInfoModal(false)}/>}
                 </div>
         ))}
         </div>
         <div className='add-goal'>
-            {buttonOpen && <button className="newGoal-button" onClick={() => addingQuest()}>Add New Quest</button>}
+            {buttonOpen && <button class="newGoal-button" onClick={() => addingQuest()}>Add New Quest</button>}
             {console.log(goals)}
             {goalModalOpen && <NewGoalModal goals={goals} flipButtonVisibility={()=>(flipButtonVisibility())} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
         </div>

@@ -36,19 +36,19 @@ export const NewGoalModal = ({goals, flipButtonVisibility, closeNewGoalModal}) =
         <div className="Goal-Modal-Container">
             <div className="goal-modal">
             <form>
-				<div className="body-font">
+				<div class="body-font">
 					<label>Name:
 						<br></br>
 						<input className="input" name="name" defaultValue={submittedGoal.name } onChange={(e)=>onChangeHandler(e)}/>
 					</label>
 				</div>
-                <div className="body-font">
+                <div class="body-font">
 					<label>Description:
 						<br></br>
 						<input className="input" name="description" defaultValue={submittedGoal.description} onChange={(e)=>onChangeHandler(e)}/>
 					</label>
 				</div>
-                <div className="body-font">
+                <div class="body-font">
 					<label>Repeatable:
 						<br></br>
                         <label for="True">
