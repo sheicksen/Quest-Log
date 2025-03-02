@@ -8,8 +8,7 @@ export function CompletedGarden() {
         <div class="completedGarden">
             {completeNonrepeat.map(((goal)=> 
                 <div >
-                    <img class="pixel-art" height="100px" width="100px"  src={Flower11} alt="Your streak flower!"></img>
-                    {goal.name}
+                    <img class="pixel-art" height="100px" width="100px"  src={Flower11} alt="Your streak flower for completing a nonrepeatable goal"></img>
                 </div>
             ))}
         </div>
