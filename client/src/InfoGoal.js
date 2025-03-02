@@ -1,12 +1,13 @@
 import { use, useState } from "react";
 
-export const InfoGoal = ({goal, closeInfoModal}) => {
+export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
 
     const [streaks,setStreaks] = useState(goal.streak);
 
     function markComplete(goal){
         goal.streak += 1;
         setStreaks(goal.streak);
+        updateStreak(goal.streak);
         goal.complete = true;
      }
 

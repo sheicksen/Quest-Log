@@ -48,6 +48,9 @@ export const Goal = ({onFocus}) => {
         flipVisibility();
         onFocus(streak);
     }
+    function passUpdate(streak){
+        onFocus(streak);
+    }
 
 return (
     <div>
@@ -57,7 +60,7 @@ return (
                     <button onClick={(e) => {handleFocus(e, goal.streak)}}>
                     <li key={goal.name}>{goal.name}</li>
                     </button>
-                    {visible && <InfoGoal goal={goal} closeInfoModal={()=>setInfoModal(false)}/>}
+                    {visible && <InfoGoal updateStreak={passUpdate} goal={goal} closeInfoModal={()=>setInfoModal(false)}/>}
                 </div>
         ))}
         </div>
