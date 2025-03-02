@@ -7,7 +7,6 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Goal, goals } from './goal.js';
 import { Flower } from './Flower.js';
-import BGImage from './images/background.png';
 import Footer from './Footer.js';
 
 // Gets data sent by the home route from the server.
@@ -16,12 +15,11 @@ const apiCall = () => {
     console.log(data.data);
   });
 }
-
-
 function App() {
   const [streakDisplay, setStreakDisplay] = useState(0);
-  const passStreak = (streakVal) => {
-    setStreakDisplay(streakVal);
+  const passStreak = () => {
+    setStreakDisplay(streakDisplay + 1);
+    console.log(streakDisplay);
   };
   return (
     
@@ -37,7 +35,7 @@ function App() {
             </Col>
             <Col style={{height:"100vh"}}>
             <div class="col-min-height bg-container bg-gradient">
-              <Flower streakVal={streakDisplay}></Flower>
+              <Flower flowerStage={streakDisplay}></Flower>
             </div>
               
             </Col>
@@ -49,6 +47,8 @@ function App() {
             </Col>
           </Row>
         </Container>
+        <Button onClick={passStreak}>Update Streak
+        </Button>
         <Footer></Footer>
     </div>
   );

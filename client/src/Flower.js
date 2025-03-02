@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Flower1 from './images/Flower1.png';
 import Flower2 from './images/Flower2.png';
 import Flower3 from './images/Flower3.png';
@@ -24,10 +24,13 @@ const flower = {
     end: Withered
 }
 
-export function Flower({streakVal}){
-    let [flowerStage, setFlowerStage] = useState(streakVal);
+export function Flower({flowerStage}){
     // If streak val >=0, a flower image will be displayed. If streakVal = -1, a withered flower will be displayed.
+    console.log("Rerendering ", flowerStage);
     return (
-        <img class="pixel-art" height="500px" width="500px" src={streakVal === -1 ? flower.end : flower.stage[flowerStage]} alt=""></img>
+        <div>
+            <img class="pixel-art" height="500px" width="500px" src={flowerStage > 11 ? flower.end : flower.stage[flowerStage]} alt="Your streak flower!"></img>
+            <p>Current Streak: {flowerStage}</p>
+        </div>
     );
 }
