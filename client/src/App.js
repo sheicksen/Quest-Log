@@ -16,9 +16,30 @@ const apiCall = () => {
     console.log(data.data);
   });
 }
+/* checkStreaks 
+*  Compares the last submit date of each goal
+to th current date. Sets the streak to -1 (broken) if the difference
+is greater than 1.
+
+*/
+function checkStreaks(){
+  const today=new Date();
+  for(let i = 0; i < goals.length; i++){
+    let submitDate = Date.parse(goals[i].lastSubmit);
+    let timeDiff = today.getTime() - submitDate.getTime();
+    let daysDiff = Math.round(timeDiff / (1000*3600*24));
+
+    if (daysDiff > 1){
+      goals[i].streak = -1;
+    }
+  }
+}
 function App() {
   const [streakDisplay, setStreakDisplay] = useState(0);
   const [currentGoal, setCurrentGoal] = useState({name: "No task selected", description: "Select a task to view your plant's progression.", streak:0});
+  
+  checkStreaks();
+  
   const passStreak = (streak) => {
     setStreakDisplay(streak);
   };

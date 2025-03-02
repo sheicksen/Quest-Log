@@ -8,6 +8,8 @@ export class GoalClass{
     streak
     complete
     visible
+    date
+    lastSubmit
     constructor(name, description, repeatable){
         this.name = name
         this.description = description
@@ -16,6 +18,7 @@ export class GoalClass{
         this.complete = false
         this.visible = false
         this.date = new Date().toDateString();
+        this.lastSubmit = new Date().toDateString();
     };
 };
 

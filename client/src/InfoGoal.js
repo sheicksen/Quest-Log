@@ -10,6 +10,7 @@ export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
         setStreaks(goal.streak);
         updateStreak(goal.streak);
         goal.complete = true;
+        goal.lastSubmit = new Date().toDateString();
         removeGoal(goal)
      }
 
