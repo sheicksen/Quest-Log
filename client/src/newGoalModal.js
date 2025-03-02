@@ -5,7 +5,7 @@ import './newGoalModal.css'
 export const NewGoalModal = ({closeNewGoalModal}) => {
 
     const [submittedGoal,setSubmittedGoal] = useState({
-		name:"", description:"", repeatable: false, streak:0, complete:false});
+		name:"", description:"", repeatable: false, streak:0, complete:false, visible:false});
 
 	const [goalFilled, setGoalFilled] = useState(true);
 
@@ -18,7 +18,7 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
 	}
 
 	const submitGoal = () => {
-        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false));
+        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false, false));
         closeNewGoalModal();
     }
 

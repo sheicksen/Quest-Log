@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { NewGoalModal } from './newGoalModal';
+import { InfoGoal } from './InfoGoal.js'
 
 export class GoalClass{
     name
@@ -24,10 +25,10 @@ export const Goal = () => {
 
     let [goalModalOpen, setGoalModalOpen] = useState(false);
 
-   let [visible, setVisible] = useState(false);
+   let [InfoModalOpen, setInfoModal] = useState(false);
 
-   function flipVisibility() {
-        setVisible(!visible)
+   function flipVisibility(goal) {
+        goal.visible === true ? goal.visible=false : goal.visible=true;
    }
 
     function markComplete(goal){
@@ -41,27 +42,18 @@ export const Goal = () => {
     return (
         <div>
             <div className="goal-list-modal">
-            {goals.map(function(goal){
+                {goals.map(function(goal){
                     return <div className="listed-goal">
-                        <button onClick={flipVisibility}>
+                        <button onClick={()=>{goal.visible=true}}>
                         <li key={goal.name}>{goal.name}</li>
                         </button>
-                        {visible && <div>
-                            <br></br>
-                            {goal.description}
-                            <br></br>
-                            Streak: {goal.streak}
-                            <br></br>
-                            <button onClick={markComplete(goal)}>Mark Completed</button>
-                        </div>}
+                        {goal.visible && <InfoGoal goal={goal} closeInfoModal={()=>{goal.visible=false}}/>}
                     </div>
                   })}
             </div>
             <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
             {console.log(goals)}
             {goalModalOpen && <NewGoalModal closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
-            {
-            }  
         </div>
     )
 };
