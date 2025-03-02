@@ -124,6 +124,18 @@
   background-color: rgb(76,52,42);
 }
 
+.change-date{
+  background-color: rgb(110, 89, 80);
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 10px;
+}
+
+.change-date:hover{
+  text-decoration: underline;
+  background-color: rgb(76,52,42);
+}
+
 .add-goal{
   padding-top: 20px;
 }
