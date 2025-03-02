@@ -43,7 +43,7 @@
 
 .header-font{
   font-family: "Comic Sans MS", sans-serif;
-  font-size: calc(var(--slider-value, 16px)*1.5);
+  font-size: var(--slider-value, 16px);
   position: relative;
   top: 10px;
 }
@@ -111,7 +111,9 @@
 
 .newGoal-button{
   background-color: rgb(110, 89, 80);
-  font-size: 30px;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
+  position: relative;
 }
 
 .newGoal-button:hover{
@@ -119,11 +121,12 @@
   background-color: rgb(76,52,42);
 }
 
+
 .complete-button{
   background-color: rgb(110, 89, 80);
-  box-sizing: border-box;
-  height: 60px;
-  font-size: 100%;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 18px);
+  position: relative;
 }
 
 .complete-button:hover{
@@ -165,7 +168,9 @@
 
 .submit-button{
   background-color: rgb(110, 89, 80);
-  font-size: 20px;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
+  position: relative;
 }
 
 .submit-button:hover{
@@ -174,8 +179,9 @@
 }
 
 .submit-gemini{
-  background-color: rgb(110, 89, 80);
-  font-size: 20px;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 1px);
+  position: relative;
 }
 
 .submit-gemini:hover{
