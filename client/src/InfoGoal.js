@@ -1,4 +1,5 @@
 import { use, useState } from "react";
+import {removeGoal} from "./goal"
 
 export const InfoGoal = ({goal, closeInfoModal}) => {
 
@@ -8,6 +9,7 @@ export const InfoGoal = ({goal, closeInfoModal}) => {
         goal.streak += 1;
         setStreaks(goal.streak);
         goal.complete = true;
+        removeGoal(goal)
      }
 
     return (
