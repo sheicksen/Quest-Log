@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from 'react';
 import AiChatComp from './GeminiText';
 import axios from 'axios';
 import Navigation from './Navbar';
@@ -17,6 +18,10 @@ const apiCall = () => {
 
 
 function App() {
+  const [streakDisplay, setStreakDisplay] = useState(0);
+  const passStreak = (streakVal) => {
+    setStreakDisplay(streakVal);
+  };
   return (
     
     <div className="App">
@@ -28,11 +33,11 @@ function App() {
             <Col>
               <div class="task-container">
                   <h2 class="header-font">Quest List</h2>
-                  <Goal></Goal>
+                  <Goal onUpdate={passStreak}></Goal>
               </div>
             </Col>
             <Col>
-              <Flower></Flower>
+              <Flower streakVal={streakDisplay}></Flower>
             </Col>
             <Col>
               <div class="task-container">
