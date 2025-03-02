@@ -44,6 +44,10 @@ export const Goal = ({onFocus}) => {
     flipButtonVisibility();
    }
 
+    function handleFocus(e, streak){
+        flipVisibility();
+        onFocus(streak);
+    }
 
 return (
     <div>
