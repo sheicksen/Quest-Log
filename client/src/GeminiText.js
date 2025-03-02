@@ -28,7 +28,7 @@ function AiChatComp() {
         <form onSubmit={handleSubmit}>
         <p>{paragraphText}</p>
         <label for="AiText">Ask Gemini</label>
-        <input type="text" id="AiText" name="AiText" value ={inputValue} onChange={handleChange}></input>
+        <input class = "body-font" type="text" id="AiText" name="AiText" value ={inputValue} onChange={handleChange}></input>
         <input className="submit-gemini" type="submit" value="Submit"></input>
         </form>
       </div>
