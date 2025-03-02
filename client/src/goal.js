@@ -2,12 +2,23 @@ import React, {useState} from 'react';
 import { NewGoalModal } from './newGoalModal';
 import { InfoGoal } from './InfoGoal.js'
 export class GoalClass{
+    /** This class represents a goal
+     * attributes: 
+     * name: name for the task that will be displayed
+     * description: notes/description of the task that will display when the task it clicked on
+     * repeatable: whether or not a task is a repeating task or only needs to be done once
+     * streak: how many times the task has been completed
+     * complete: whether or not the task is complete
+     * visible: whether or not just name should be visible or if description, streak, and complete button should display
+     */
     name
     description
     repeatable
     streak
     complete
     visible
+    date
+    lastSubmit
     constructor(name, description, repeatable){
         this.name = name
         this.description = description
@@ -16,6 +27,7 @@ export class GoalClass{
         this.complete = false
         this.visible = false
         this.date = new Date().toDateString();
+        this.lastSubmit = new Date().toDateString();
     };
 };
 
@@ -23,6 +35,9 @@ export let goals = [];
 export let completeNonrepeat = [];
 
 export function removeGoal(goal){
+    /** This function removes a non-repeatable
+     * 
+     */
     if(goal.repeatable==="False"){
         let nonRepeat = goals.filter((current)=> current===goal)
         completeNonrepeat.push(nonRepeat);
