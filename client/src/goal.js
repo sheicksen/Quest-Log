@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { NewGoalModal } from './newGoalModal';
 import { InfoGoal } from './InfoGoal.js'
-
 export class GoalClass{
     name
     description
@@ -16,6 +15,7 @@ export class GoalClass{
         this.streak = 0
         this.complete = false
         this.visible = false
+        this.date = new Date().toDateString();
     };
 };
 
