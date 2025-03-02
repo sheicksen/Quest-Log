@@ -29,7 +29,7 @@ function AiChatComp() {
         <p>{paragraphText}</p>
         <label for="AiText">Ask Gemini</label>
         <input type="text" id="AiText" name="AiText" value ={inputValue} onChange={handleChange}></input>
-        <input type="submit" value="Submit"></input>
+        <input className="submit-gemini" type="submit" value="Submit"></input>
         </form>
       </div>
     );
