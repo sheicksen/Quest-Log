@@ -39,7 +39,7 @@ function App() {
               </div>
             </Col>
             <Col style={{height:"100vh"}}>
-            <div class="col-min-height bg-container bg-gradient">
+            <div style={{padding:"20px"}}class="col-min-height bg-container bg-gradient">
               <h2 class="header-font">Quest Development</h2>
               <Flower streak={streakDisplay} goal={currentGoal}></Flower>
             </div>
