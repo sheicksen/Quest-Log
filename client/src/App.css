@@ -179,6 +179,7 @@
 }
 
 .submit-gemini{
+  background-color: rgb(110, 89, 80);
   font-family: "Comic Sans MS", sans-serif;
   font-size: var(--slider-value, 1px);
   position: relative;
