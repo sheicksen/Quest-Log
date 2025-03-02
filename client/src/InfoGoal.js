@@ -5,7 +5,8 @@ export const InfoGoal = ({goal, closeInfoModal}) => {
     const [streaks,setStreaks] = useState(goal.streak);
 
     function markComplete(goal){
-        setStreaks(streaks+1);
+        goal.streak += 1;
+        setStreaks(goal.streak);
         goal.complete = true;
      }
 

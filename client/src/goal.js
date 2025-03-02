@@ -74,7 +74,7 @@ return (
                 </div>
         ))}
         </div>
-        <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Make New Goal</button>
+        <button className="newGoal-button" onClick={() => setGoalModalOpen(true)}>Add New Quest</button>
         {console.log(goals)}
         {goalModalOpen && <NewGoalModal goals={goals} closeNewGoalModal={()=>{setGoalModalOpen(false)}}/>} 
     </div>

@@ -31,7 +31,7 @@ function App() {
           <Row>
             <Col>
               <div class="task-container col-min-height">
-                  <h2 class="header-font">Quest List</h2>
+                  <h2 class="header-font">Quest Log</h2>
                   <Goal onUpdate={passStreak}></Goal>
               </div>
             </Col>
