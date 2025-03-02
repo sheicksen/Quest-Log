@@ -35,8 +35,9 @@ export let goals = [];
 export let completeNonrepeat = [];
 
 export function removeGoal(goal){
-    /** This function removes a non-repeatable
-     * 
+    /** This function removes a non-repeatable task from the goals array when the task is completted and puts it in an array called completeNonrepeat
+     * params:
+     * goal - the completed goal that is a non-repeatable task
      */
     if(goal.repeatable==="False"){
         let nonRepeat = goals.filter((current)=> current===goal)
