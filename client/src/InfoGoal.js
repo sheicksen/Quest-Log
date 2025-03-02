@@ -21,7 +21,6 @@ export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
                 <div>Description: {goal.description}</div>
                 <div>Streaks: {streaks}</div>
                 <button className="complete-button" onClick={()=> markComplete(goal)}>Mark {goal.name} Complete</button>
-                <button className="change-date" onClick={()=>goal.lastSubmit=new Date("01/02/2025").toISOString()}>Change Date for Demo Purposes</button>
             </div>
         </div>
     );

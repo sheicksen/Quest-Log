@@ -33,7 +33,11 @@ export class GoalClass{
 
 export let goals = [];
 export let completeNonrepeat = [];
-
+let demoGoal = new GoalClass("Old task", "This task hasn't been worked on in a while", true);
+demoGoal.streak = 5;
+demoGoal.date = new Date("01/02/2025").toDateString();
+demoGoal.lastSubmit = new Date("01/02/2025").toISOString();
+goals.push(demoGoal);
 export function removeGoal(goal){
     /** This function removes a non-repeatable
      * 
