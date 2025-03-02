@@ -17,8 +17,8 @@ const apiCall = () => {
 }
 function App() {
   const [streakDisplay, setStreakDisplay] = useState(0);
-  const passStreak = () => {
-    setStreakDisplay(streakDisplay + 1);
+  const passStreak = (streak) => {
+    setStreakDisplay(streak);
     console.log(streakDisplay);
   };
   return (
@@ -30,7 +30,7 @@ function App() {
             <Col>
               <div class="task-container col-min-height">
                   <h2 class="header-font">Quest Log</h2>
-                  <Goal onUpdate={passStreak}></Goal>
+                  <Goal onFocus={passStreak}></Goal>
               </div>
             </Col>
             <Col style={{height:"100vh"}}>
