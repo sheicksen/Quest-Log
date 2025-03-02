@@ -37,9 +37,6 @@ export const Goal = () => {
         setVisible(!visible);
    }
 
-    function markComplete(goal){
-       goal.complete = true;
-    }
     /*function flipVisibility(goal){
         (goal.visible===true) ? goal.visible = false : goal.visible = true
     }*/
