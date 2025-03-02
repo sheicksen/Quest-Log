@@ -5,7 +5,7 @@ import logo from "./images/Flower11.png";
 function Navigation(){
     return (
         <Navbar expand="lg" className="App-nav">
-        <Navbar.Brand href="#home"><img  height="30px" width="30px" src={logo} class="pixel-art"></img>Quest Log</Navbar.Brand>
+        <Navbar.Brand href="#home" class="page-logo"><img  height="50px" width="50px" src={logo} class="pixel-art"></img>Quest Log</Navbar.Brand>
     </Navbar>
     );
 }
