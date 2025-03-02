@@ -43,7 +43,7 @@
 
 .header-font{
   font-family: "Comic Sans MS", sans-serif;
-  font-size: var(--slider-value, 16px);
+  font-size: calc(var(--slider-value, 16px)*1.5);
   position: relative;
   top: 10px;
 }
