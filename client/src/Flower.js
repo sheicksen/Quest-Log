@@ -36,7 +36,7 @@ export function Flower({goal}){
                     {goal.name === "No task selected" ?
                         <li>or make one to get started</li>:
                         <div>
-                            <li>Current Streak: {goal.streak}</li>
+                            <li>Current Streak: {goal.streak < 0 ? "Broken" : goal.streak}</li>
                             <li>Quest taken on {goal.date}</li>
                         </div> 
                     }
