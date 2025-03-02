@@ -3,6 +3,10 @@
   align-content: center;
   background-color: rgb(76,52,42);
 }
+@font-face {
+  font-family: "Comic Sans MS";
+  src: local("Comic Sans MS"), url("./fonts/Comic Sans MS.ttf") format("ttf"); /* Adjust path and format */
+}
 .gradient-bg{
   background-color: rgb(7,69,81);
   background: linear-gradient(0deg, rgba(7,69,81,1) 0%, rgba(19,123,163,1) 35%, rgba(212,240,242,1) 100%);
@@ -12,11 +16,13 @@
   min-height:99%;
 }
 .App-nav {
+  font-family: "Comic Sans MS", sans-serif;
   background-color: rgb(175,146,113);
   margin-bottom: 5px;
   padding-left: 20px;
 }
 .bg-container{
+  font-family: "Comic Sans MS", sans-serif;
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -28,14 +34,15 @@
   width:100%;
 } */
 .task-container {
+  font-family: "Comic Sans MS", sans-serif;
   background-color:rgb(175,146,113);
   align-content: center;
   padding: 50px;
 }
 .header-font{
+  font-family: "Comic Sans MS", sans-serif;
   position: relative;
   top: 10px;
-  font-family:'Courier New', Courier, monospace;
 }
 .pixel-art {
   image-rendering: pixelated;
@@ -54,6 +61,7 @@
   justify-content: center;
 }
 .navbar-header{
+  font-family: "Comic Sans MS", sans-serif;
   font-size:30px;
   font-family: 'Courier New', Courier, monospace;
 }
