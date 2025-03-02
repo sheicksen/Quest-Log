@@ -40,8 +40,10 @@
   align-content: center;
   padding: 50px;
 }
+
 .header-font{
   font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
   position: relative;
   top: 10px;
 }
@@ -174,4 +176,9 @@
 .submit-gemini:hover{
   text-decoration: underline;
   background-color: rgb(76,52,42);
+}
+
+.customSlider{
+  width:10px auto;
+  margin: auto;
 }
