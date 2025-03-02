@@ -20,8 +20,6 @@ export const NewGoalModal = ({closeNewGoalModal}) => {
 
 	const submitGoal = () => {
         goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false, false));
-        closeNewGoalModal();
-        goals.push(new GoalClass(submittedGoal.name,submittedGoal.description,submittedGoal.repeatable, 0, false));
 		let histupdate = "Updated list of goals:";
         for (const goal of goals){
 			histupdate += "\nGoal name: "+goal.name + "\nGoal description: " + goal.description + "\nRepeatable?: "+ goal.repeatable;
