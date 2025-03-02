@@ -24,8 +24,7 @@ export const Goal = () => {
 
     let [goalModalOpen, setGoalModalOpen] = useState(false);
 
-   let [visible, setVisible] = useState(false);
-
+    let [visible, setVisible] = useState(false);
    function flipVisibility() {
         setVisible(!visible)
    }
@@ -33,7 +32,6 @@ export const Goal = () => {
     function markComplete(goal){
        goal.complete = true;
     }
-
     /*function flipVisibility(goal){
         (goal.visible===true) ? goal.visible = false : goal.visible = t
     }*/
