@@ -47,6 +47,11 @@
   position: relative;
   top: 10px;
 }
+.body-font{
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: var(--slider-value, 16px);
+  position: relative;
+}
 .pixel-art {
   image-rendering: pixelated;
   image-rendering: crisp-edges;

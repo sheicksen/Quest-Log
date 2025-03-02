@@ -56,7 +56,7 @@ function App() {
             <Col>
               <div class="task-container col-min-height">
                   <h2 class="header-font">Quest Log</h2>
-                  <Goal onFocus={passGoal} onStreakUpdate={passStreak}></Goal>
+                  <Goal class = "body-font" onFocus={passGoal} onStreakUpdate={passStreak}></Goal>
               </div>
             </Col>
             <Col style={{height:"100vh"}}>
