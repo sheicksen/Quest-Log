@@ -64,9 +64,9 @@ return (
     <div>
         <div className="goal-list-modal">
         {goals.map(((goal) => 
-                 <div className="listed-goal">
-                    <button onClick={(e) => {handleFocus(e, goal)}}>
-                    <li key={goal.name}>{goal.name}</li>
+                 <div>
+                    <button className="listed-goal" onClick={(e) => {handleFocus(e, goal)}}>
+                    <li className="listed-goal" key={goal.name}>{goal.name}</li>
                     </button>
                     {visible && <InfoGoal updateStreak={onStreakUpdate} goal={goal} closeInfoModal={()=>setInfoModal(false)}/>}
                 </div>

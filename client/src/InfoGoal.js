@@ -19,7 +19,7 @@ export const InfoGoal = ({goal, closeInfoModal, updateStreak}) => {
                 <div>Name: {goal.name}</div>
                 <div>Description: {goal.description}</div>
                 <div>Streaks: {streaks}</div>
-                <button onClick={()=> markComplete(goal)}>Mark as Complete</button>
+                <button className="complete-button" onClick={()=> markComplete(goal)}>Mark {goal.name} Complete</button>
             </div>
         </div>
     );
