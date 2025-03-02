@@ -91,5 +91,29 @@
   padding:20px;
 }
 .flower{
-  margin: 10px 10px 10vh 10px;
+  margin: 20px;
+}
+
+.goal-list-modal{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+
+.listed-goal{
+  background-color: rgb(175,146,113);
+  border:none;
+}
+
+.newGoal-button{
+  background-color: rgb(110, 89, 80);
+  size: 100px;
+}
+
+.complete-button{
+  background-color: rgb(175,146,113);
+  border: none;
+}
+
+.add-goal{
+  padding-top: 20px;
 }
