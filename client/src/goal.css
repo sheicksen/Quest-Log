@@ -2,10 +2,10 @@
     border:0px;
     background-color: #a59b9a;
     cursor: pointer;
-    padding-bottom: 1px;
+    padding: 10px;
     font-family:'Comic Sans MS', "Comic Sans", serif;
 }
 
-#listed-goal{
+.listed-goal{
     border: 2px solid black;
 }
